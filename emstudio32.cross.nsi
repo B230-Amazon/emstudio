@@ -128,8 +128,8 @@ Section "EMStudio (Required)" ;No components page, name is not important
   
 
   SetOutPath "$INSTDIR\definitions"
-  File "emstune\core\freeems.config.json"
-  File "emstune\core\decodersettings.json"
+  File "emstune\core\libreems.config.json"
+  ;File "emstune\core\decodersettings.json"
   SetOutPath "$INSTDIR\dashboards"
   File "emstune\core\src\gauges.qml"
   SetOutPath "$INSTDIR\dashboards\WarningLabel"
