@@ -148,6 +148,12 @@ Section "EMStudio (Required)" ;No components page, name is not important
   SetOutPath "$INSTDIR\platforms"
   File ${QTDIR}\plugins\platforms\qwindows.dll
 
+
+  SetOutPath $INSTDIR
+  File vcredist_x86.exe
+  DetailPrint "Installing MSVC2012 runtime"
+  ExecWait "$INSTDIR/vcredist_x86.exe /q /norestart"
+
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\EMStudio "Install_Dir" "$INSTDIR"
   
@@ -218,6 +224,7 @@ Section "Uninstall"
   Delete $INSTDIR\emsload.exe
   Delete $INSTDIR\emslogview.exe
   Delete $INSTDIR\uninstall.exe
+  Delete $INSTDIR\vcredist_x86.exe
   Delete $INSTDIR\*.*
   Delete $INSTDIR\dashboards\*.*
   Delete $INSTDIR\dashboards\WarningLabel\*.*
