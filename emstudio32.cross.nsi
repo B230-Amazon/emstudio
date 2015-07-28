@@ -144,6 +144,10 @@ Section "EMStudio (Required)" ;No components page, name is not important
 !else
   File "emstune\core\plugins\${PLUGIN}"
 !endif
+
+  SetOutPath "$INSTDIR\platforms"
+  File ${QTDIR}\plugins\platforms\qwindows.dll
+
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\EMStudio "Install_Dir" "$INSTDIR"
   
@@ -159,17 +163,14 @@ Section "Qt Components"
 
   SetOutPath $INSTDIR
 
-;  File ${QTDIR}\bin\libgcc_s_dw2-1.dll
-;  File ${QTDIR}\bin\libstdc++-6.dll
-;  File ${QTDIR}\bin\libwinpthread-1.dll
   File ${QTDIR}\bin\Qt5WebKitWidgets.dll
   File ${QTDIR}\bin\Qt5MultimediaWidgets.dll
   File ${QTDIR}\bin\Qt5Multimedia.dll
   File ${QTDIR}\bin\Qt5Gui.dll
   File ${QTDIR}\bin\Qt5Core.dll
-  File ${QTDIR}\bin\icuin51.dll
-  File ${QTDIR}\bin\icuuc51.dll
-  File ${QTDIR}\bin\icudt51.dll
+  File ${QTDIR}\bin\icuin52.dll
+  File ${QTDIR}\bin\icuuc52.dll
+  File ${QTDIR}\bin\icudt52.dll
   File ${QTDIR}\bin\Qt5Network.dll
   File ${QTDIR}\bin\Qt5Widgets.dll
   File ${QTDIR}\bin\Qt5OpenGL.dll
@@ -217,12 +218,13 @@ Section "Uninstall"
   Delete $INSTDIR\emsload.exe
   Delete $INSTDIR\emslogview.exe
   Delete $INSTDIR\uninstall.exe
-  Delete $INSTDIR\*.*"
-  Delete $INSTDIR\dashboards\*.*"
-  Delete $INSTDIR\dashboards\WarningLabel\*.*"
-  Delete $INSTDIR\definitions\*.*"
-  Delete $INSTDIR\plugins\*.*"
-  Delete $INSTDIR\wizards\*.*"
+  Delete $INSTDIR\*.*
+  Delete $INSTDIR\dashboards\*.*
+  Delete $INSTDIR\dashboards\WarningLabel\*.*
+  Delete $INSTDIR\definitions\*.*
+  Delete $INSTDIR\plugins\*.*
+  Delete $INSTDIR\wizards\*.*
+  Delete $INSTDIR\platforms\*.*
 
   ; Remove shortcuts, if any
   Delete "$SMPROGRAMS\EMStudio\*.*"
