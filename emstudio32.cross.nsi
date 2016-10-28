@@ -150,9 +150,9 @@ Section "EMStudio (Required)" ;No components page, name is not important
 
 
   SetOutPath $INSTDIR
-  File vcredist_x86.exe
-  DetailPrint "Installing MSVC2012 runtime"
-  ExecWait "$INSTDIR/vcredist_x86.exe /q /norestart"
+  File vc_redist.x86.2015.exe
+  DetailPrint "Installing MSVC2015 runtime"
+  ExecWait "$INSTDIR/vc_redist.x86.2015.exe /q /norestart"
 
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\EMStudio "Install_Dir" "$INSTDIR"
@@ -168,26 +168,25 @@ SectionEnd ; end the section
 Section "Qt Components"
 
   SetOutPath $INSTDIR
-
-  File ${QTDIR}\bin\Qt5WebKitWidgets.dll
+  File ${QTDIR}\bin\Qt5WebEngine.dll
+  File ${QTDIR}\bin\Qt5WebEngineWidgets.dll
+  File ${QTDIR}\bin\Qt5WebEngineCore.dll
   File ${QTDIR}\bin\Qt5MultimediaWidgets.dll
   File ${QTDIR}\bin\Qt5Multimedia.dll
   File ${QTDIR}\bin\Qt5Gui.dll
   File ${QTDIR}\bin\Qt5Core.dll
-  File ${QTDIR}\bin\icuin52.dll
-  File ${QTDIR}\bin\icuuc52.dll
-  File ${QTDIR}\bin\icudt52.dll
   File ${QTDIR}\bin\Qt5Network.dll
   File ${QTDIR}\bin\Qt5Widgets.dll
   File ${QTDIR}\bin\Qt5OpenGL.dll
   File ${QTDIR}\bin\Qt5PrintSupport.dll
-  File ${QTDIR}\bin\Qt5WebKit.dll
   File ${QTDIR}\bin\Qt5Quick.dll
   File ${QTDIR}\bin\Qt5Qml.dll
   File ${QTDIR}\bin\Qt5Sql.dll
   File ${QTDIR}\bin\Qt5Positioning.dll
   File ${QTDIR}\bin\Qt5Sensors.dll
-  File ${QTDIR}\bin\Qt5Declarative.dll
+  File ${QTDIR}\bin\Qt5Qml.dll
+  File ${QTDIR}\bin\Qt5Quick.dll
+  File ${QTDIR}\bin\Qt5QuickControls2.dll
   File ${QTDIR}\bin\Qt5XmlPatterns.dll
   File ${QTDIR}\bin\Qt5Xml.dll
   File ${QTDIR}\bin\Qt5Script.dll
@@ -195,6 +194,10 @@ Section "Qt Components"
   File ${QTDIR}\bin\Qt5Test.dll
   File ${QTDIR}\bin\Qt5SerialPort.dll
 
+  SetOutPath $INSTDIR\QtQuick.2
+  File ${QTDIR}\qml\QtQuick.2\plugins.qmltypes
+  File ${QTDIR}\qml\QtQuick.2\qmldir
+  File ${QTDIR}\qml\QtQuick.2\qtquick2plugin.dll
 
 SectionEnd
 
