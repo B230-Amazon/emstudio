@@ -10,6 +10,6 @@ Homepage: http://emstune.com
 
 Package: emstudio
 Architecture: any
-Depends: libqt5gui5 (>=5.2.1), libqt5core5a (>=5.2.1), libqt5widgets5 (>=5.2.1), libqt5printsupport5 (>=5.2.1), libqt5opengl5 (>=5.2.1), libqt5declarative5 (>=5.2.1), libqt5network5 (>=5.2.1), libqt5script5 (>=5.2.1), libqt5sql5 (>=5.2.1), libqt5serialport5 (>=5.2.1), freeglut3 (>=2.5)
+Depends: libqt5gui5 (>=5.2.1), libqt5core5a (>=5.2.1), libqt5widgets5 (>=5.2.1), libqt5printsupport5 (>=5.2.1), libqt5opengl5 (>=5.2.1), libqt5declarative5 (>=5.2.1), libqt5network5 (>=5.2.1), libqt5script5 (>=5.2.1), libqt5sql5 (>=5.2.1), libqt5serialport5 (>=5.2.1), freeglut3 (>=2.5), libqt5quick5 (>=5.2.1), libqt5qml5 (>=5.2.1), qml-module-qtquick2 (>=5.2.1)
 Description: Open Source ECU Tuning Application, focusing on LibreEMS (http://libreems.org/)
  <insert long description, indented with spaces>
