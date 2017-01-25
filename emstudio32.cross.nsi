@@ -138,6 +138,7 @@ Section "EMStudio (Required)" ;No components page, name is not important
   File "emstune\core\src\qml\wizards\BenchTest.qml"
   File "emstune\core\src\qml\wizards\DecoderOffset.qml"
   File "emstune\core\src\qml\wizards\wizard.qml"
+  File "emstune\core\src\qml\wizards\OutputChannelTest.qml"
   SetOutPath "$INSTDIR\plugins"
 !ifndef PLUGIN
   File "emstune\core\plugins\libreemsplugin.dll"
