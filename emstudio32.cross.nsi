@@ -207,7 +207,7 @@ Section "Start Menu Shortcuts"
 
   CreateDirectory "$SMPROGRAMS\EMStudio"
   CreateShortCut "$SMPROGRAMS\EMStudio\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\EMStudio\EMSTune.lnk" "$INSTDIR\emstudio.exe" "" "$INSTDIR\emstudio.exe" 0
+  CreateShortCut "$SMPROGRAMS\EMStudio\EMSTune.lnk" "$INSTDIR\emstune.exe" "" "$INSTDIR\emstune.exe" 0
   CreateShortCut "$SMPROGRAMS\EMStudio\EMSLoad.lnk" "$INSTDIR\emsload.exe" "" "$INSTDIR\emsload.exe" 0
   CreateShortCut "$SMPROGRAMS\EMStudio\EMSLogView.lnk" "$INSTDIR\emslogview.exe" "" "$INSTDIR\emslogview.exe" 0
   
