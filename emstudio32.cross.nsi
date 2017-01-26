@@ -121,7 +121,7 @@ Section "EMStudio (Required)" ;No components page, name is not important
   ;File "/home/michael/code/emstudio/release/emstudio.exe"
   ;File "/home/michael/code/emstudio/src/gauges.qml"
   ;File "/home/michael/code/emstudio/freeems.config.json"
-  File "emstune\core\release\emstudio.exe"
+  File "emstune\core\release\emstune.exe"
   File "emsload\release\emsload.exe"
   File "emslogview\release\emslogview.exe"
   
